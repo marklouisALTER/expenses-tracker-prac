@@ -6,12 +6,13 @@
   "scripts": {
     "server": "npm run watch --prefix server",
     "client": "npm run start --prefix client",
-    "watch": "npm run client & npm run server"
+    "watch": "concurrently \"npm run client\" \"npm run server\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "async-handler": "^0.0.3",
     "concurrently": "^8.0.1",
     "express-async-handler": "^1.2.0"
   }
